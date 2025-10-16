@@ -15,9 +15,9 @@ public class Impresion extends Producto {
     // Arreglo de fotos que se desean imprimir
     Foto[] fotos;
 
-    /**
-     * Asigna los datos de la impresión.
-     */
+
+    // Asigna los datos de la impresión.
+     
     public void asignarDatos(String nombre, double precio, String categoria, String codigo,
                              String color, String material, String calidad) {
 
@@ -30,16 +30,16 @@ public class Impresion extends Producto {
         calidadImpresion = calidad;
     }
 
-    /**
-     * Asigna las fotos que serán impresas.
-     */
+    
+    // Asigna las fotos que serán impresas.
+     
     public void asignarFotos(Foto[] listaFotos) {
         fotos = listaFotos;
     }
 
-    /**
-     * Muestra los detalles específicos de la impresión.
-     */
+    
+     // Muestra los detalles específicos de la impresión.
+     
     public void detalleImpresion() {
         System.out.println("Impresión en " + tipoColor +
                 " sobre papel " + tipoMaterialPapel +
