@@ -33,7 +33,20 @@ public class Pedido {
     }
 
     /**
-     * Muestra toda la información general del pedido.
+     * Calcula el total a pagar del pedido sumando los precios de los productos.
+     */
+    public double calcularTotalPedido() {
+        double total = 0;
+
+        for (Producto p : listaProductos) {
+            total += p.costoUnitario;
+        }
+
+        return total;
+    }
+
+    /**
+     * Muestra la información completa del pedido.
      */
     public void mostrarDetallePedido() {
         System.out.println("=========================================");
@@ -42,29 +55,14 @@ public class Pedido {
         System.out.println("Fecha: " + fechaPedido);
         System.out.println("Productos comprados:");
 
-        // Recorre la lista y muestra los datos de cada producto
+        // Muestra los productos
         for (Producto p : listaProductos) {
             p.mostrarDatosProducto();
         }
 
-        // Muestra el total calculado
+        // Muestra el total
         System.out.println("-----------------------------------------");
         System.out.println("TOTAL A PAGAR: $" + calcularTotalPedido());
         System.out.println("=========================================");
-    }
-
-    
-      //Calcula el total a pagar del pedido sumando los precios de cada producto.
-     //retorna el total del pedido
-     
-    public double calcularTotalPedido() {
-        double total = 0;
-
-        // Suma el costo de todos los productos en el pedido
-        for (Producto p : listaProductos) {
-            total += p.costoUnitario;
-        }
-
-        return total;
     }
 }

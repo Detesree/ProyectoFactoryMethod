@@ -1,19 +1,25 @@
 // Clase base que define las propiedades comunes de todos los productos
 public class Producto {
-    // Nombre del producto
+
+    // Nombre del producto (ejemplo: Cámara Orion Z5)
     String nombreArticulo;
-    // Precio del producto
+
+    // Precio individual del producto
     double costoUnitario;
-    // Categoría a la que pertenece el producto (Ej: Fotografía, Impresión)
+
+    // Categoría del producto (ejemplo: Fotografía, Impresión)
     String categoriaProducto;
-    // Código único de inventario
+
+    // Código único de inventario para identificar el producto
     String codigoInventarioUnico;
 
-    // Método que muestra la información general de cualquier producto
+    /**
+     * Muestra la información general de un producto.
+     */
     public void mostrarDatosProducto() {
         System.out.println("Producto: " + nombreArticulo +
-                           " | Categoría: " + categoriaProducto +
-                           " | Precio: $" + costoUnitario +
-                           " | Código: " + codigoInventarioUnico);
+                " | Categoría: " + categoriaProducto +
+                " | Precio: $" + costoUnitario +
+                " | Código: " + codigoInventarioUnico);
     }
 }

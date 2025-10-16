@@ -3,18 +3,18 @@
  
 public class Impresion extends Producto {
 
-    // Tipo de color usado Blanco y negro, Color
+    // Tipo de color usado (ejemplo: Blanco y negro, Color)
     String tipoColor;
 
-    // Tipo de papel utilizado  Brillante, Mate
+    // Tipo de papel utilizado (ejemplo: Brillante, Mate)
     String tipoMaterialPapel;
 
-    // Nivel de calidad de la impresión  Alta, Media
+    // Nivel de calidad de la impresión (Ejemplo: Alta, Media)
     String calidadImpresion;
 
-    
-     //Asigna los datos de la impresión.
-     
+    /**
+     * Asigna los datos de la impresión.
+     */
     public void asignarDatos(String nombre, double precio, String categoria, String codigo,
                              String color, String material, String calidad) {
 
@@ -27,9 +27,9 @@ public class Impresion extends Producto {
         calidadImpresion = calidad;
     }
 
-    
-      // Muestra los detalles específicos de la impresión.
-     
+    /**
+     * Muestra los detalles específicos de la impresión.
+     */
     public void detalleImpresion() {
         System.out.println("Impresión en " + tipoColor +
                 " sobre papel " + tipoMaterialPapel +

@@ -1,11 +1,19 @@
 // Clase Camara que hereda de producto
 
-public class Camara extends Producto{
+public class Camara extends Producto {
+
+    // Nombre del fabricante (ejemplo: Canon, Orion)
     String fabricante;
+
+    // Modelo o versión de la cámara
     String versionModelo;
+
+    // Resolución óptica de la cámara en megapíxeles
     int resolucionOpticaMP;
 
-    // Método para asignar los valores de los atributos
+    /**
+     * Asigna los datos a todos los atributos de la cámara.
+     */
     public void asignarDatos(String nombre, double precio, String categoria, String codigo,
                              String marca, String modelo, int resolucion) {
 
@@ -18,10 +26,11 @@ public class Camara extends Producto{
         resolucionOpticaMP = resolucion;
     }
 
-    // Método para mostrar los detalles específicos de una cámara
+    /**
+     * Muestra los detalles específicos de la cámara.
+     */
     public void detalleCamara() {
         System.out.println("Cámara " + fabricante + " modelo " + versionModelo +
-                           " con " + resolucionOpticaMP + "MP de resolución.");
+                " con " + resolucionOpticaMP + "MP de resolución.");
     }
 }
-
