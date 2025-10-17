@@ -1,5 +1,5 @@
 // Clase base que define las propiedades comunes de todos los productos
-public class Producto {
+public abstract class  Producto {
 
     // Nombre del producto (ejemplo: Cámara Orion Z5)
     String nombreArticulo;
