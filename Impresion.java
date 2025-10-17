@@ -3,24 +3,17 @@
  
 public class Impresion extends Producto {
 
-    // Tipo de color usado (ejemplo: Blanco y negro, Color)
+    // Atributos específicos de la impresión
     String tipoColor;
-
-    // Tipo de papel utilizado (ejemplo: Brillante, Mate)
     String tipoMaterialPapel;
-
-    // Nivel de calidad de la impresión (Ejemplo: Alta, Media)
     String calidadImpresion;
-
-    // Arreglo de fotos que se desean imprimir
     Foto[] fotos;
 
-
-    // Asigna los datos de la impresión.
+    
+    //  Asigna los datos generales y específicos de la impresión.
      
     public void asignarDatos(String nombre, double precio, String categoria, String codigo,
                              String color, String material, String calidad) {
-
         nombreArticulo = nombre;
         costoUnitario = precio;
         categoriaProducto = categoria;
@@ -31,21 +24,18 @@ public class Impresion extends Producto {
     }
 
     
-    // Asigna las fotos que serán impresas.
+    // Asigna las fotos que se imprimirán.
      
     public void asignarFotos(Foto[] listaFotos) {
         fotos = listaFotos;
     }
 
     
-     // Muestra los detalles específicos de la impresión.
+    // Muestra los detalles específicos de la impresión y las fotos asociadas.
      
     public void detalleImpresion() {
-        System.out.println("Impresión en " + tipoColor +
-                " sobre papel " + tipoMaterialPapel +
-                " con calidad " + calidadImpresion);
-
-        // Mostrar las fotos asociadas, si existen
+        System.out.println("Impresión: " + tipoColor + " | Papel: " + tipoMaterialPapel +
+                " | Calidad: " + calidadImpresion);
         if (fotos != null && fotos.length > 0) {
             System.out.println("Fotos asociadas:");
             for (Foto f : fotos) {

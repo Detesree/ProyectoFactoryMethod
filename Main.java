@@ -8,38 +8,47 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Crear las fotos que se van a imprimir
+        // 1️⃣ Crear las fotos que se imprimirán
         Foto foto1 = new Foto("familia_retrato.jpg");
         Foto foto2 = new Foto("paisaje_vacaciones.png");
-        Foto[] fotos = { foto1, foto2 };
+        Foto[] listaFotos = { foto1, foto2 };
 
-        //  Crear los productos directamente
-        Camara productoCamara = new Camara();
-        productoCamara.asignarDatos("Cámara Orion Z5", 2899.99, "Fotografía", "CAM-ORZ5",
+        //  Crear las subclases concretas de Producto
+        Camara camara = new Camara();
+        Impresion impresion = new Impresion();
+
+        //  Asignar datos a la cámara
+        camara.asignarDatos("Cámara Orion Z5", 2899.99, "Fotografía", "CAM-ORZ5",
                 "Orion", "Z5", 24);
 
-        Impresion productoImpresion = new Impresion();
-        productoImpresion.asignarDatos("Impresión Retrato", 15.75, "Servicio de Impresión", "IMP-RT20",
+        //  Asignar datos a la impresión
+        impresion.asignarDatos("Impresión Retrato", 15.75, "Servicio de Impresión", "IMP-RT20",
                 "Color", "Papel Brillante", "Alta");
-        productoImpresion.asignarFotos(fotos); // se agregan las fotos al producto
 
-        // Crear el cliente
+        // Asignar las fotos a la impresión
+        impresion.asignarFotos(listaFotos);
+
+        //  Aplicar herencia: manejar los objetos a través de la clase abstracta Producto
+        Producto productoCamara = camara;
+        Producto productoImpresion = impresion;
+
+        //  Crear el cliente
         Cliente cliente = new Cliente();
         cliente.asignarDatos("1089876543", "Camilo Tenorio", "3123456789", "camilo.tenorio@correo.com");
 
-        //  Crear la lista de productos
-        Producto[] listaProductos = { productoCamara, productoImpresion };
+        // 7️⃣ Crear el listado de productos del pedido
+        Producto[] productosPedido = { productoCamara, productoImpresion };
 
-        // Crear el pedido
+        // 8️⃣ Crear el pedido
         Pedido pedido = new Pedido();
-        pedido.asignarDatos(cliente, listaProductos, new Date(), 456123789, "ENV-CT-2025");
+        pedido.asignarDatos(cliente, productosPedido, new Date(), 456123789, "ENV-CT-2025");
 
-        //  Mostrar detalles del pedido (incluye total)
+        // 9️⃣ Mostrar los detalles del pedido y el total
         pedido.mostrarDetallePedido();
 
-        //  Mostrar detalles adicionales
-        System.out.println("Detalles adicionales:");
-        productoCamara.detalleCamara();
-        productoImpresion.detalleImpresion();
+        // 🔟 Mostrar detalles específicos de los productos
+        System.out.println("\nDetalles adicionales:");
+        camara.detalleCamara();
+        impresion.detalleImpresion();
     }
 }
