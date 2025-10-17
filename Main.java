@@ -8,12 +8,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // 1️⃣ Crear las fotos que se van a imprimir
+        // Crear las fotos que se van a imprimir
         Foto foto1 = new Foto("familia_retrato.jpg");
         Foto foto2 = new Foto("paisaje_vacaciones.png");
         Foto[] fotos = { foto1, foto2 };
 
-        // 2️⃣ Crear los productos directamente
+        //  Crear los productos directamente
         Camara productoCamara = new Camara();
         productoCamara.asignarDatos("Cámara Orion Z5", 2899.99, "Fotografía", "CAM-ORZ5",
                 "Orion", "Z5", 24);
@@ -23,21 +23,21 @@ public class Main {
                 "Color", "Papel Brillante", "Alta");
         productoImpresion.asignarFotos(fotos); // se agregan las fotos al producto
 
-        // 3️⃣ Crear el cliente
+        // Crear el cliente
         Cliente cliente = new Cliente();
         cliente.asignarDatos("1089876543", "Camilo Tenorio", "3123456789", "camilo.tenorio@correo.com");
 
-        // 4️⃣ Crear la lista de productos
+        //  Crear la lista de productos
         Producto[] listaProductos = { productoCamara, productoImpresion };
 
-        // 5️⃣ Crear el pedido
+        // Crear el pedido
         Pedido pedido = new Pedido();
         pedido.asignarDatos(cliente, listaProductos, new Date(), 456123789, "ENV-CT-2025");
 
-        // 6️⃣ Mostrar detalles del pedido (incluye total)
+        //  Mostrar detalles del pedido (incluye total)
         pedido.mostrarDetallePedido();
 
-        // 7️⃣ Mostrar detalles adicionales
+        //  Mostrar detalles adicionales
         System.out.println("Detalles adicionales:");
         productoCamara.detalleCamara();
         productoImpresion.detalleImpresion();

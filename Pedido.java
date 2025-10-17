@@ -21,9 +21,9 @@ public class Pedido {
     // Código de rastreo del envío
     String idRastreoEnvio;
 
-    /**
-     * Asigna los datos principales del pedido.
-     */
+    
+     // Asigna los datos principales del pedido.
+     
     public void asignarDatos(Cliente c, Producto[] productos, Date fecha, int tarjeta, String rastreo) {
         comprador = c;
         listaProductos = productos;
@@ -32,9 +32,9 @@ public class Pedido {
         idRastreoEnvio = rastreo;
     }
 
-    /**
-     * Calcula el total a pagar del pedido sumando los precios de los productos.
-     */
+    
+    // Calcula el total a pagar del pedido sumando los precios de los productos.
+     
     public double calcularTotalPedido() {
         double total = 0;
 
@@ -45,9 +45,9 @@ public class Pedido {
         return total;
     }
 
-    /**
-     * Muestra la información completa del pedido.
-     */
+    
+    // Muestra la información completa del pedido.
+     
     public void mostrarDetallePedido() {
         System.out.println("=========================================");
         System.out.println("Cliente: " + comprador.nombreCliente);

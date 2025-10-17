@@ -14,9 +14,9 @@ public class Cliente {
     // Correo electrónico principal del cliente
     String correoPrincipal;
 
-    /**
-     * Asigna los datos del cliente.
-     */
+    
+    //  Asigna los datos del cliente.
+     
     public void asignarDatos(String id, String nombre, String telefono, String correo) {
         nroIdentificacion = id;
         nombreCliente = nombre;

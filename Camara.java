@@ -11,9 +11,9 @@ public class Camara extends Producto {
     // Resolución óptica de la cámara en megapíxeles
     int resolucionOpticaMP;
 
-    /**
-     * Asigna los datos a todos los atributos de la cámara.
-     */
+    
+    // Asigna los datos a todos los atributos de la cámara.
+     
     public void asignarDatos(String nombre, double precio, String categoria, String codigo,
                              String marca, String modelo, int resolucion) {
 
@@ -26,9 +26,9 @@ public class Camara extends Producto {
         resolucionOpticaMP = resolucion;
     }
 
-    /**
-     * Muestra los detalles específicos de la cámara.
-     */
+    
+    // Muestra los detalles específicos de la cámara.
+     
     public void detalleCamara() {
         System.out.println("Cámara " + fabricante + " modelo " + versionModelo +
                 " con " + resolucionOpticaMP + "MP de resolución.");

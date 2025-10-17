@@ -13,9 +13,9 @@ public class Producto {
     // Código único de inventario para identificar el producto
     String codigoInventarioUnico;
 
-    /**
-     * Muestra la información general de un producto.
-     */
+    
+    //  Muestra la información general de un producto.
+     
     public void mostrarDatosProducto() {
         System.out.println("Producto: " + nombreArticulo +
                 " | Categoría: " + categoriaProducto +
